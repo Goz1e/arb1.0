@@ -1,0 +1,15 @@
+// figure out rates
+// try to get price without forloop
+
+
+// """
+// {
+// 'pair_a': 
+//     {'symbol': 'ETHBTC', 'base': 'ETH', 'quote': 'BTC', 'ask': '0.06740700', 'bid': '0.06740600', 'base_amount': 1, 'quote_amount': 1}, 
+// 'pair_b': 
+//     {'symbol': 'EOSETH', 'base': 'EOS', 'quote': 'ETH', 'ask': '0.00056700', 'bid': '0.00056600', 'base_amount': 1, 'quote_amount': 1}, 
+// 'pair_c': 
+//     {'symbol': 'EOSBTC', 'base': 'EOS', 'quote': 'BTC', 'ask': '0.00003820', 'bid': '0.00003810', 'base_amount': 1, 'quote_amount': 1}, 
+// 'combined': 'ETHBTC,EOSETH,EOSBTC'
+// }
+// """

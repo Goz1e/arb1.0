@@ -1,0 +1,27 @@
+{% extends "accounts/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block content %}
+  <h2>create_profile</h2>
+
+  <div class="flex-row gap-3 justify-content-around">
+
+    <div class="row  pt-3">
+      <div id="imgdiv" class="col-sm-5 text-center">
+            <img class="thumbnail img-responsive"  src="{% static '/images/index.svg' %}" 
+                style="max-width:100%;height: auto;max-height: 100%;"> 
+     </div>
+
+     <div class="col-sm-4 shadow-sm rounded">
+        
+        <form method="post">
+          {% csrf_token %}
+          {{ form|crispy }}
+          <button class="btn btn-primary btn-sm" type="submit">submit</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+{% endblock %}

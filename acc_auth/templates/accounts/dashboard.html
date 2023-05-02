@@ -1,0 +1,42 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+ <section>
+    <br>
+  
+
+    <div class="container" style="height: 100vh;" >
+      <br><br>
+      <div class="d-flex justify-content-center">
+        <p class="fw-light">makeshift dashboard</p>
+      </div>
+
+      <div class="row  pt-3 pb-4  shadow rounded">
+        <div id="imgdiv" class="col-sm-5 text-center">
+              <img class="thumbnail img-responsive"  src="{% static 'images/index.svg' %}" 
+                  style="max-width:100%;height: auto;max-height: 100%;"> 
+       </div>
+        <div class="col-sm-5 text-center">
+          <p><h2 class="">{% lorem 7 w %}</h2></p>
+        </div>
+      </div>
+      <br>
+
+      <div class="d-flex justify-content-center">
+        <p class="fw-light">let's get you started {{request.user.profile.first_name}}</p>
+      </div>
+
+      <div class="d-flex justify-content-center gap-2">
+        <!-- <a class="btn btn-primary btn-sm" href="{% url 'accounts:login' %}" role="button">login</a>
+        
+        <a class="btn btn-outline-primary btn-sm" href="{% url 'accounts:signup' %}" role="button">signup</a> -->
+      </div>
+    </div>
+  </section>
+  
+  
+  
+{% endblock %}

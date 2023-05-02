@@ -1,0 +1,71 @@
+info:
+  description: ''
+  title: ''
+  version: ''
+openapi: 3.0.0
+paths:
+  /api/:
+    get:
+      operationId: api_list
+      tags:
+      - api
+  /api/binance{format}:
+    get:
+      description: Return a list of arbitrage opportunities.
+      operationId: api_read_0
+      parameters:
+      - in: path
+        name: format
+        required: true
+        schema:
+          description: ''
+          title: ''
+          type: string
+      tags:
+      - api
+  /api/poloniex{format}:
+    get:
+      description: Return a list of arbitrage opportunities
+      operationId: api_read_1
+      parameters:
+      - in: path
+        name: format
+        required: true
+        schema:
+          description: ''
+          title: ''
+          type: string
+      tags:
+      - api
+  /api/token{format}:
+    post:
+      description: 'Takes a set of user credentials and returns an access and refresh
+        JSON web
+
+        token pair to prove the authentication of those credentials.'
+      operationId: api_create
+      parameters:
+      - in: path
+        name: format
+        required: true
+        schema:
+          description: ''
+          title: ''
+          type: string
+      tags:
+      - api
+  /api/{format}:
+    get:
+      operationId: api_read
+      parameters:
+      - in: path
+        name: format
+        required: true
+        schema:
+          description: ''
+          title: ''
+          type: string
+      tags:
+      - api
+servers:
+- url: ''

@@ -1,0 +1,39 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+ <section>
+  
+    <div class="container" style="height: 100vh;" >
+      <br>
+      <div class="d-flex justify-content-center">
+        <p class="fw-light">this is a portfolio project</p>
+      </div>
+
+      <div class="row  pt-3 pb-4  shadow-sm rounded mx-auto bg-light">
+      <!-- <div class="row  pt-3 pb-4  shadow rounded mx-auto" id="index-card"> -->
+        <div id="imgdiv" class="col-sm-5 text-center w-25 mx-auto" >
+          <img class="thumbnail img-responsive" id="index-image" alt="" src="{% static 'images/cloud.png' %}" > 
+       </div>
+        <div class="col-sm-6 text-center mx-auto my-auto">
+          <p class=""><h2 class="fw-lighter">Aggregated Triangular Arbitrage Opportunities From Web2 and 3 Exchanges</h2></p>
+        </div>
+      </div>
+      <br>
+
+      <div class="d-flex justify-content-center">
+        <p class="fw-light">let's get you started</p>
+      </div>
+
+      <div class="d-flex justify-content-center gap-2">
+        <a class="btn btn-outline-secondary btn-sm" href="{% url 'accounts:login' %}" role="button">login</a>        
+        <a class="btn btn-outline-primary btn-sm" href="{% url 'accounts:signup' %}" role="button">signup</a>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+{% endblock %}

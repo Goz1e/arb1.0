@@ -1,0 +1,85 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="container px-4 py-5" id="custom-cards">
+    
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+      
+        <!-- <a href="{% url 'arb:binance' %}"> -->
+        <div class="col">
+            <div class="card card-cover h-100 w-100 overflow-hidden text-bg-dark rounded-4 shadow-md" style="background-image: url('{% static 'arb/images/b1.jpg' %}');">
+                <div class="d-flex flex-column h-100 p-4 pb-3 text-white text-shadow-1">
+                    <a href="{% url 'arb:binance' %}">
+                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-md text-light">Binance</h3>
+                    </a>
+                    <ul class="d-flex list-unstyled mt-auto">
+                    <li class="me-auto">
+                        <img src="{% static 'arb/images/b.png' %}" alt="Bootstrap" width="32" height="32">
+                    </li>
+                    <li class="d-flex align-items-center me-3">
+                        <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                        <small>300 tri-pairs</small>
+                    </li>
+                    <li class="d-flex align-items-center">
+                        <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                        <small>web2</small>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- </a> -->
+
+      <div class="col">
+        <div class="card card-cover h-100 w-100 overflow-hidden text-bg-dark rounded-4 shadow-md" style="background-image: url('{% static 'arb/images/p1.jpg' %}');">
+          <div class="d-flex flex-column h-100 p-4 pb-3 text-white text-shadow-1">
+            <a href="{% url 'arb:poloniex' %}">
+                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-md text-light">Poloniex</h3>
+            </a>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                <img src="{% static 'arb/images/p.png' %}" alt="Bootstrap" width="32" height="32">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                <small>500 tri-pairs</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                <small>web2</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 w-100 overflow-hidden text-bg-dark rounded-4 shadow-md img-fluid" style="background-image: url('{% static 'arb/images/u1.jpg' %}');">
+          <div class="d-flex flex-column h-100 p-4 pb-3 text-shadow-1">
+            <a href="#">
+                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-md text-light">UniswapV3 </h3>
+            </a>
+            <p>triangular arbitrage opportunities on UniswapV3 will be available soon!</p>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                <img src="{% static 'arb/images/u.svg' %}" alt="Bootstrap" width="32" height="32">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                <small>400 tri-pairs</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                <small>web3</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

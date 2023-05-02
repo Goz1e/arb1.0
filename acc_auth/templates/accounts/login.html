@@ -1,0 +1,133 @@
+{% extends "accounts/base.html" %}
+
+{% load i18n %}
+{% load account socialaccount %}
+
+{% load crispy_forms_filters %}
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
+{% get_providers as socialaccount_providers %}
+{% include "socialaccount/snippets/login_extra.html" %}
+{% block content %}
+
+<div class="text-center">
+  <br><br>
+  <p>login</p>  
+</div>
+
+<div class="row mx-auto w-75">
+  <div class=" col-sm-5 col-md-6  mx-auto p-3 rounded-1 bg-light shadow-sm">
+      <form class="login" method="POST" action="{% url 'accounts:login' %}">
+        {% csrf_token %}
+        {{ form|crispy }}
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+        <div class="d-grid">
+          <button class="primaryAction mt-3 btn btn-outline-secondary" type="submit">login</button><br>
+        </div>
+      </form>
+      <div class="d-flex pb-2">
+        <a class="btn btn-primary btn-sm text-dark secondaryAction mx-auto text-center" href="{% provider_login_url 'google' process='login' %}"><i class="bi bi-google"></i> continue with Google</a>
+        <!-- <a class="btn btn-outline-secondary btn-sm secondaryAction mx-auto text-dark text-center" href="#"><i class="bi bi-apple"></i> Apple</a> -->
+      </div>
+      <a class="btn btn-sm secondaryAction mx-auto text-dark text-center" href="{% url 'account_reset_password' %}">forgot password?</a>
+  </div>
+</div>  
+
+
+
+
+<!-- <div class="text-center">
+    <h1>uuuuuuu{% trans "Sign In" %}</h1>
+
+    {% get_providers as socialaccount_providers %}
+
+    {% if socialaccount_providers %}
+    <p>Please sign in with one
+    of your existing third party accounts.<br>Or, <a href="{% url 'accounts:signup' %}">signup</a>
+    for a google account and sign in below:</p>
+
+    <div class="socialaccount_ballot">
+
+      <div class="socialaccount_providers">
+        {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+      </div>
+
+      <div class="login-or border-top border-bottom my-3">{% trans 'OR' %}</div>
+
+    </div>
+
+    {% include "socialaccount/snippets/login_extra.html" %}
+
+    {% else %}
+    <p>{% blocktrans %}If you have not created an account yet, then please
+    <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+    {% endif %}
+  </div>
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <form class="login" method="POST" action="{% url 'accounts:login' %}">
+          {% csrf_token %}
+          {{ form|crispy }} -->
+          <!-- {% if redirect_field_value %}
+          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+          {% endif %} -->
+          <!-- <div class="d-grid">
+            <button class="primaryAction mt-3 btn btn-dark" type="submit">{% trans "Sign In" %}</button><br>
+            <a class="button secondaryAction text-dark text-center" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+          </div>
+        </form>
+    </div> -->
+  <!-- </div> -->
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
