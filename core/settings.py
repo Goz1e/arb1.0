@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = "django-insecure-93o@u@^+3(yyr#(=2tix0qbu$i-uih@kf-axm$j5$xi-kj&7x8"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -212,8 +212,8 @@ SESSION_COOKIE_AGE = 120
 
 
 # AWS S3 SETTINGS
-AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
+# AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
+# AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
 
 # AWS_STORAGE_BUCKET_NAME = 'arby1.0'
 
