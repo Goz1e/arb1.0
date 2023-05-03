@@ -208,7 +208,11 @@ SESSION_COOKIE_AGE = 120
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'acc_auth/static'),
+    os.path.join(BASE_DIR, 'arb/static'),
+    os.path.join(BASE_DIR, 'static')
+]
 STATIC_ROOT =os.path.join(BASE_DIR, 'staticfiles')
 
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
