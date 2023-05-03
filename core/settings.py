@@ -24,8 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = config('SECRET_KEY')
-SECRET_KEY = 'django-insecure-93o@u@^+3(yyr#(=2tix0qbu$i-uih@kf-axm$j5$xi-kj&7x8'
+SECRET_KEY = config('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -217,12 +216,10 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT =os.path.join(BASE_DIR, 'staticfiles')
 
-# AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
-# AWS_SECRET_ACCESS_KEY = config('AWS_SECRETE_ACCESS_KEY')
+AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = config('AWS_SECRETE_ACCESS_KEY')
 
 
-AWS_ACCESS_KEY_ID = 'AKIATCFBH5BLVZUSZTJ2'
-AWS_SECRET_ACCESS_KEY = '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'
 
 AWS_STORAGE_BUCKET_NAME = 'arby1.0'
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
@@ -234,3 +231,4 @@ AWS_LOCATION = 'static'
 STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 AWS_DEFAULT_ACL = None
+AWS_S3_REGION_NAME= 'eu-north-1'
