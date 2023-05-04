@@ -17,13 +17,11 @@ class UserCreationForm(forms.ModelForm):
     fields, plus a repeated password."""
     password1 = forms.CharField(label='Password', widget=forms.PasswordInput)
     password2 = forms.CharField(label='Password confirmation', widget=forms.PasswordInput)
-
     class Meta:
         model = MyUser
         fields = ('email',)
 
         
-
     def clean_password2(self):
         # Check that the two password entries match
         password1 = self.cleaned_data.get("password1")
@@ -52,14 +50,6 @@ class UserChangeForm(forms.ModelForm):
         model = MyUser
         fields = ('email', 'password', 'is_active', 'is_admin')
 
-
-# class ProfileEditForm(forms.ModelForm):
-#     class Meta:
-#         model = Profile
-#         fields = ('first_name', 'last_name', 'date_of_birth')
-#         widgets={
-#             "date_of_birth": Date_input(attrs={"class":'border-success border-opacity-25',}),
-#         }
 
 class LoginForm(forms.ModelForm):
 

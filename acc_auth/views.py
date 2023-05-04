@@ -28,7 +28,7 @@ def signup(request):
             user = form.save(commit=False)
             user.save()
             login(request, user, backend='django.contrib.auth.backends.ModelBackend')
-            return redirect('accounts:completed')
+            return redirect('arb:dashboard')
     return render(request, 'accounts/signup.html', {'signup_form': form,'title':'dashboard'})
 
 
@@ -51,10 +51,6 @@ def login_view(request,backend = 'django.contrib.auth.backends.ModelBackend'):
             return redirect('accounts:index')
         
     return render(request, 'accounts/login.html', context={'form': LoginForm,'title':'login'})
-
-
-# def completed(request):
-#     return render(request, 'accounts/completed.html', context={'title':'Completed!'})
 
 
 def about(request):
