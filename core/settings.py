@@ -57,6 +57,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'storages',
+    # for csrf 
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -67,6 +69,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware'
 ]
 
 AUTH_USER_MODEL = "acc_auth.MyUser"
@@ -193,7 +196,7 @@ REST_FRAMEWORK = {
 
 }
 
-CSRF_TRUSTED_ORIGINS = ["https://arb10-production.up.railway.app/","https://127.0.0.1/"]
+CSRF_TRUSTED_ORIGINS = ["https://arb10-production.up.railway.app","https://127.0.0.1/"]
 
 
 SIMPLE_JWT = {
@@ -211,6 +214,7 @@ SESSION_COOKIE_AGE = 120
 
 
 STATIC_ROOT =os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = 'static/'
 
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = config('AWS_SECRETE_ACCESS_KEY')
