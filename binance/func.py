@@ -289,7 +289,6 @@ def get_dept_from_order_book(surface_arb):
         'BTC':0.05,
         'ETH':0.1
     }
-    
 
     if swap_1 in starting_amount_dict:
         starting_amount = starting_amount_dict[swap_1]
@@ -352,8 +351,3 @@ def get_dept_from_order_book(surface_arb):
         return result
     else:
         return {}
-        
-
-
-
-

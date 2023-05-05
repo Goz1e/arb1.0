@@ -41,14 +41,10 @@ def step_0():
         json.dump(structured_pairs,fp)
 
 
-def step_1():
-    saved_file = os.getcwd() + r'\uniswapV3\structured_pairs.json'
-    with open(saved_file,'r') as fp:
-        structured_pairs = json.load(fp) 
-
+def step_1(structured_pairs):
+    
     # calculating surface rates
     limit = int(len(structured_pairs))
-    print(limit)
     surface_rates_list = []
     for t_pair in structured_pairs[0:limit]:
         surface_rate = calc_triangular_arb_surface_rate(t_pair,min_rate=1)

@@ -21,18 +21,17 @@ def index(request):
 
 
 def signup(request):
-    print('initiated....................')
     form = UserCreationForm(request.POST or None)
     if request.method == 'POST':
         if form.is_valid():
             user = form.save(commit=False)
             user.save()
-            login(request, user, backend='django.contrib.auth.backends.ModelBackend')
+            login(request, user)
             return redirect('arb:dashboard')
     return render(request, 'accounts/signup.html', {'signup_form': form,'title':'dashboard'})
 
 
-def login_view(request,backend = 'django.contrib.auth.backends.ModelBackend'):
+def login_view(request):
     form = LoginForm()
     if request.method == 'POST':
         form = LoginForm(request.POST)

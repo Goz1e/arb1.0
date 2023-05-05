@@ -17,16 +17,9 @@ def step_0():
     structured_pairs = structured_triangular_pairs(tickers_list[0:1500])
     with open('binance_tpairs_list.json','w') as fp:
         json.dump(structured_pairs,fp)
-    # print('step 0 completed!')
-    # print(len(structured_pairs))
 
-# get current price data and calculate arbitrage
-def step_1():
+def step_1(structured_pairs):
     arb_list = []
-    saved_file = os.getcwd() + r'\binance\binance_tpairs_list.json'
-
-    with open(saved_file) as json_file:
-        structured_pairs  = json.load(json_file)
     prices_json = get_tickers(price_url)
     
     for t_pair in structured_pairs[0:]:   

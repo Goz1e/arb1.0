@@ -207,7 +207,7 @@ SIMPLE_JWT = {
     "UPDATE_LAST_LOGIN": False,
 }
 
-SESSION_COOKIE_AGE = 120
+SESSION_COOKIE_AGE = 1000
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
@@ -215,6 +215,7 @@ SESSION_COOKIE_AGE = 120
 
 STATIC_ROOT =os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = 'static/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = config('AWS_SECRETE_ACCESS_KEY')

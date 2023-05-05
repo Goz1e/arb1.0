@@ -17,14 +17,8 @@ def step_0():
     print(len(structured_pairs))
 
 # adds latest price data to pairs dict in triangular pairs list
-def step_1():
-    count = 0
+def step_1(structured_pairs):
     arb_list = []
-
-    saved_file = os.getcwd() + '\\poloniex\\poloniex_tpair_list.json'
-    with open(saved_file) as json_file:
-        structured_pairs  = json.load(json_file)
-        print(len(structured_pairs))
     latest_prices=get_tickers(url)
 
     for t_pair in structured_pairs[0:]:
