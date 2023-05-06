@@ -13,8 +13,8 @@ def step_0():
     structured_pairs = structured_triangular_pairs(ticker_list[0:1500])
     with open('poloniex_tpair_list.json','w') as fp:
         json.dump(structured_pairs,fp)
-    print('step 0 completed!')
-    print(len(structured_pairs))
+    # print('step 0 completed!')
+    # print(len(structured_pairs))
 
 # adds latest price data to pairs dict in triangular pairs list
 def step_1(structured_pairs):
@@ -30,7 +30,5 @@ def step_1(structured_pairs):
                 arb_list.append(real_rate_arb)
     if len(arb_list) < 1:
         return None
-    print(len(arb_list))
-    # return None
     return arb_list
             
