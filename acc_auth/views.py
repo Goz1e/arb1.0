@@ -26,7 +26,7 @@ def signup(request):
         if form.is_valid():
             user = form.save(commit=False)
             user.save()
-            login(request, user)
+            login(request, user, backend='django.contrib.auth.backends.ModelBackend')
             return redirect('arb:dashboard')
     return render(request, 'accounts/signup.html', {'signup_form': form,'title':'dashboard'})
 
@@ -42,7 +42,7 @@ def login_view(request):
                 password=form.cleaned_data['password'],
             )
             if user is not None:
-                login(request, user)
+                login(request, user, backend='django.contrib.auth.backends.ModelBackend')
                 messages.info(request, "login successful!")                
                 return redirect('arb:dashboard')    
             else:
