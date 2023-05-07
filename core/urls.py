@@ -10,6 +10,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('arb/', include('arb.urls')),
     path('api/', include('api.urls')),
-    # path('api-auth/', include('rest_framework.urls')),
     path('docs/', include_docs_urls(title='ArbyAPI')),        
 ]
