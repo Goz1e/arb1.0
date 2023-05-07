@@ -58,8 +58,9 @@ INSTALLED_APPS = [
     # django rest framewok
     'rest_framework',
     'rest_framework_simplejwt',
-    'storages',
+    'drf_yasg',
     # for csrf 
+    'storages',
     'corsheaders',
 ]
 
@@ -210,10 +211,16 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.BasicAuthentication',
         'rest_framework.authentication.SessionAuthentication',
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
-    'DEFAULT_SCHEMA_CLASS':'rest_framework.schemas.coreapi.AutoSchema'
-
+    'DEFAULT_SCHEMA_CLASS':'rest_framework.schemas.coreapi.AutoSchema',
+    'DEFAULT_THROTTLE_CLASSES': [
+        'rest_framework.throttling.AnonRateThrottle',
+        'rest_framework.throttling.UserRateThrottle'
+    ],
+    'DEFAULT_THROTTLE_RATES': {
+        'anon': '50/day',
+        'user': '50/day'
+    }
 }
 
 CSRF_TRUSTED_ORIGINS = ["https://arb10-production.up.railway.app","https://127.0.0.1/"]

@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 from django.conf import settings
 import os, json, boto3
 from django.templatetags.static import static
-# Create your views here.
+
 
 # Intatntitating s3 bucket 
 s3 = boto3.resource('s3',
