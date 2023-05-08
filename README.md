@@ -8,29 +8,29 @@ __METHODOLOGY:__
 then goes on to save this data. the output is an array of unique pairs similar to the data below
 [{BTCETH, BTCUSDT, USDT_ETH},...].
 
-- STEP 1: get the latest prices for each pair in the returned array from step-0 and pretend-trade the orderbook of pairs checking for positive
+- STEP 1: Get the latest prices for each pair in the returned array from step-0 and pretend-trade the orderbook of pairs checking for positive
 values which are returned to the user.
 
 Triangular Arbitrage explained ==> https://academy.binance.com/en/articles/what-is-triangular-arbitrage-and-how-to-use-it
 
 __DESIGN CHOICES:__ 
 
--  i opted to skip the STEP-0 by hosting the the returned data for each exchange on AWS S3, this enables the Arby focus 
+-  I opted to skip the STEP-0 by hosting the the returned data for each exchange on AWS S3, this enables the Arby focus 
     on getting latest prices and calculating arbitrage opportunities
     
--  i implementated 0Auth authentication for an easy onboarding process
+-  I implementated 0Auth authentication for an easy onboarding process
 
--  i chose Redoc API over swagger UI documentatin just because it looks better 😎
+-  I chose Redoc API over swagger UI documentatin just because it looks better 😎
 
--  implemented a throttle of 50 API calls /day just because i can 💪
+-  Implemented a throttle of 50 API calls /day just because i can 💪
 
 
 __LESSONS FROM PROJECT:__
 
--  better my understanding of working with APIs
+-  Better my understanding of working with APIs
 
--  enhance my knowledge of django Rest Framework and it's API documentation processes
+-  Enhance my knowledge of django Rest Framework and it's API documentation processes
 
--  utilization of AWS s3 buckets
+-  Utilization of AWS s3 buckets
 
 ![image](https://user-images.githubusercontent.com/80681802/236693433-c39fe82b-afb1-4c83-a863-11f9b37e8545.png)
