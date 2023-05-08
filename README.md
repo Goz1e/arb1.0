@@ -24,7 +24,7 @@ __DESIGN CHOICES:__
 ==> implemented a throttle of 50 API calls /day just because i can 💪
 
 
-LESSONS FROM PROJECT:
+__LESSONS FROM PROJECT:__
 
 ==> better my understanding of working with APIs
 
