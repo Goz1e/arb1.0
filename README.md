@@ -3,7 +3,8 @@
 Arby 1.0 is a Triangular Arbitrage aggregator with support for crypto exchanges(surface arbitrage opportunities)
 
 __METHODOLOGY:__
-STEP 0: The Algorithm sorts the price ticker to compile a list of unique arbitrage pairs
+
+-STEP 0: The Algorithm sorts the price ticker to compile a list of unique arbitrage pairs
 then goes on to save this data. the output is an array of unique pairs similar to the data below
 [{BTCETH, BTCUSDT, USDT_ETH},...].
 
