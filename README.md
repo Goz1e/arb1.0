@@ -1,6 +1,6 @@
 ![image](https://user-images.githubusercontent.com/80681802/236701616-1532eede-644c-48de-b599-d31bd2a41eca.png)
 
-Arby 1.0 is a Triangular Arbitrage aggregator with support for web2 and web3 exchanges(surface arbitrage opportunities)
+Arby 1.0 is a Triangular Arbitrage aggregator with support for crypto exchanges(surface arbitrage opportunities)
 
 METHODOLOGY:
 STEP 0: The Algorithm sorts the price ticker to compile a list of unique arbitrage pairs
